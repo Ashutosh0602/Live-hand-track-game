@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+video{
+    display: none;
+    width: 40rem;
+    height: 40rem;
+}
+canvas{
+    display: none;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(95, 159, 0);
+}
+.road{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /* z-index: -20; */
+}
+.left{
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    border-right: 0.5rem dashed white;
+}
+.right{
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    border-left: 0.5rem dashed white;
+}
+.object{
+    position: absolute;
+    right: 0;
+    bottom: 30%;
+    width: 50%;
+    /* background-color: wheat; */
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    transition: all 3s linear;
+}
+.object_pos_right{
+    right: 0% !important;
+    transition: all 3s linear;
+}
+.object_pos_left{
+    transition: all 3s linear;
+    left: 0%;
+}
+.object_pos_right.object_pos_left{
+    transition: all 3s linear;
+}
+.object_car{
+    width: 5rem;
+    background-color: aqua;
+    animation: slide 1s cubic-bezier(.34,.22,.37,.99);
+}
+@keyframes slide {
+    0%{transform: translateY(50rem);}
+    100%{transform: translateY(0rem);}
+}
+.object_obstacles{
+    position: absolute;
+    right: 0;
+    top:10%;
+    z-index: 1000;
+    width: 10rem;
+    background-color: rgba(0, 255, 76, 0.995);
+}
