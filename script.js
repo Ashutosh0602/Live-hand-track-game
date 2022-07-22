@@ -85,7 +85,7 @@ function generateObstacles() {
   const obs_pos = obs_pos_ls[Math.floor(Math.random() * 2)];
   const obs_div = document.createElement("div");
   const obs_img = document.createElement("IMG");
-  obs_img.setAttribute("src", "./rock.png");
+  obs_img.setAttribute("src", "rock.png");
   obs_div.appendChild(obs_img);
   obs_div.classList.add("object_obstacles");
 
