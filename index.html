@@ -6,30 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div>
-        <button onclick="toggle()">click</button>
-    </div>
-    <video id="videoid"></video>
-    <canvas id="canvas" class="border canvasbox"></canvas>
+    <section class="body">
 
-    <main>
-        <section class="road">
-            <div class="left"></div>
-            <div class="right"></div>
-            <section class="object">
-                <div class="object_car">sdgsr</div>
+        <video id="videoid"></video>
+        <!-- <canvas id="canvas" class="border canvasbox"></canvas> -->
+
+        <main>
+            <section class="liv_video">
+                <canvas id="canvas" class="border canvasbox"></canvas>
             </section>
-            <div class="object_obstacles"></div>
-        </section>
+            <section class="score_start">
+                <div class="score">
+                    <p class="score_text">Score</p>
+                    <p class="score_result"></p>
+                    <div class="score_bottom">
+                        <button onclick="toggle()" class="button"><i style="font-size:3rem"
+                                class="fa">&#xf021;</i></button>
+                    </div>
+                </div>
+            </section>
+            <section class="road">
+                <div class="left"></div>
+                <div class="right"></div>
+                <section class="object">
+                    <div class="object_car"><img src="car.png" alt="" srcset=""></div>
+                </section>
+                <div class="object_obstacles">
+                </div>
+            </section>
 
-    </main>
-
-    <script src="./script.js"></script>
+        </main>
+    </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
